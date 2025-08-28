@@ -1,14 +1,14 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import AddTodo from "./components/component/todoAdding.jsx"
+import DisplayTodo from "./components/component/displayTodo.jsx"
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
-      I am using Redux toolkit  
+    <>  
+      <AddTodo/>
+      <DisplayTodo/>
     </>
   )
 }
