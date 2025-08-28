@@ -6,10 +6,10 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>  
+    <div className='bg-blue-100 h-[100vh]'>  
       <AddTodo/>
       <DisplayTodo/>
-    </>
+    </div>
   )
 }
 

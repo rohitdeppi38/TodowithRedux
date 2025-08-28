@@ -7,7 +7,7 @@ const DisplayTodo = () => {
   const dispatch = useDispatch();
   return (
     <>
-      <div className="bg-blue-100 p-4 rounded-lg shadow-md mx-auto w-md">
+      <div className="bg-white p-4 rounded-lg shadow-md mx-auto w-lg">
         <h2 className='text-center font-bold text-xl`'>My todos</h2>
         <ul className={"bg-gray-100 "}>
           {state.map(todo => {
