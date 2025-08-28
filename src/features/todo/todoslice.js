@@ -1,7 +1,7 @@
 import {createSlice,nanoid} from "@reduxjs/toolkit"
 
 const initialState = {
-    todos:[{id:1,text:"Hello world",completed:true}]
+    todos:[{id:1,text:"Hello world",completed:false}]
 };
 
 const TodosDetails = createSlice({
@@ -15,10 +15,13 @@ const TodosDetails = createSlice({
             state.todos=state.todos.filter(todos=>todos.id!=action.payload)
         },
         completed(state,action){
-            state.todos.completed=action.payload;
+            const todo = state.todos.find(t=>t.id===action.payload);
+            if(todo){
+                todo.completed=!todo.completed;
+            }
         }
     }
 })
 
 export default TodosDetails ;
-export const {addTask,deleteTask} =TodosDetails.actions;
+export const {addTask,deleteTask,completed} =TodosDetails.actions;
